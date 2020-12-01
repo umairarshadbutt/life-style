@@ -1,0 +1,8 @@
+<h1>Life Style</h1>
+
+
+<% @articles.each do |articl| %>
+           
+            <h4 class="float-left"><%=articl.title %></h4>  
+            <p class="clear"><%= articl.body %></p>
+<% end %>

@@ -1,8 +1,11 @@
-class ArticleController < ApplicationController
+class ArticlesController < ApplicationController
     def new
         @article = Article.new
     end
 
+    def show 
+        @article = Article.all
+    end
     def create
         @article = Article.new(article_params)
         @article.save

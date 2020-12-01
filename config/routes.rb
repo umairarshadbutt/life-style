@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  root 'articles#show'
-  resources :articles, only: [:new, :create, :show]
+
+   root 'posts#show'
+  resources :posts, only: [:new, :create]
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 end

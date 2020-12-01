@@ -13,7 +13,13 @@
 
   <header>
     <%= link_to "Write a article", '/posts/new'%>
+    <% if user_signed_in? %>
+      <%= current_user.email %>
+    <% end %>
   </header>
-    <%= yield %>
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  
+  <%= yield %>
   </body>
 </html>

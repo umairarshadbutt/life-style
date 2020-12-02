@@ -4,7 +4,13 @@
     <title>LifeStyle</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -12,10 +18,26 @@
   <body>
 
   <header>
-    <%= link_to "Write a article", '/posts/new'%>
-    <% if user_signed_in? %>
-      <%= current_user.email %>
-    <% end %>
+<nav class="navbar navbar-default">
+ 
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="#">Hidden brand</a>
+    <ul class="nav navbar-nav nav-right">
+      <li class="nav-item ">
+            <%= link_to "Write a article", '/posts/new'%>
+      </li>
+      <li class="nav-item">
+        <% if user_signed_in? %>
+          <%= current_user.email %>
+        <% end %>
+      </li>
+     
+    </ul>
+    
+  </div>
+</nav>
+
+    
   </header>
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>

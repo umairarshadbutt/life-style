@@ -21,14 +21,14 @@
 <nav class="navbar navbar-default">
  
   <div class="container-fluid" >
-    <a class="navbar-brand" href="#">Hidden brand</a>
+    <a class="navbar-brand" href="/">Life Style</a>
     <ul class="nav navbar-nav nav-right">
       <li class="nav-item ">
             <%= link_to "Write a article", '/posts/new'%>
       </li>
       <li class="nav-item">
         <% if user_signed_in? %>
-          <li> <a href="#"> <%= current_user.email %></a></li>
+          <li> <%=link_to current_user.email, current_user %></li>
           <li> <%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
         <% else %>
           <li> <%= link_to "Sign in / Sign up ", new_user_session_path%> </li>

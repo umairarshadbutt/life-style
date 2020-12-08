@@ -1,11 +1,14 @@
 <h1>All Articles</h1>
+<div style="display: flex;">
+<% @articles.each do |article| %>
+  <div class="card" style="width: 33rem;">
+  <img class="card-img-top" src="..." alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title"><%= link_to article.title, article_path(article) %></h5>
+    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+  </div>
+  </div>
+<%end%>
 
-<ul id="articles">
-  <% @articles.each do |article| %>
-    <li>
-      <%= link_to article.title, article_path(article) %>
-    </li>
-  <% end %>
-</ul>
-
+</div>
 <%= link_to "Create a New Article", new_article_path, class: "new_article" %>

@@ -1,6 +1,17 @@
 <!DOCTYPE html>
 <html>
   <head>
+  <style>
+ .footer1 {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: #f8f8f8;
+   color: #777;
+   text-align: center;
+}
+</style>
     <title>LifeStyle</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -48,4 +59,11 @@
   
   <%= yield %>
   </body>
+  <!-- Footer -->
+   <div class="footer1">
+    <div class="footer-copyright text-center py-3">© 2020 Copyright:
+      <a href="/"> Life Style </a>
+    </div>
+  </div>
+
 </html>

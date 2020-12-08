@@ -34,9 +34,11 @@
   <div class="container-fluid" >
     <a class="navbar-brand" href="/">Life Style</a>
     <ul class="nav navbar-nav nav-right">
+      <% if user_signed_in? %>
       <li class="nav-item ">
             <%= link_to "Write a article", '/articles/new'%>
       </li>
+      <%end%>
       <li class="nav-item">
         <% if user_signed_in? %>
           <li> <%=link_to current_user.email, current_user %></li>

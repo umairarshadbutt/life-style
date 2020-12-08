@@ -17,8 +17,9 @@
     <%= render partial: 'comments/form' %>
 <br>
     <%= link_to "<< Back to Articles List", articles_path, class:"btn btn-primary" %>
-    <%= link_to "edit", edit_article_path(@article), class:"btn btn-primary" %>
-
-    <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}, class:"btn btn-danger"%>
+    <% if user_signed_in? %>
+      <%= link_to "edit", edit_article_path(@article), class:"btn btn-primary" %>
+      <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}, class:"btn btn-danger"%>
+    <%end%>
   </div>
 </div>

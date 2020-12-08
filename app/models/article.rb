@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
     has_many :comments, dependent: :destroy
     has_many :taggings, dependent: :destroy
     has_many :tags, through: :taggings
-      
+    has_attached_file :image
     def tag_list
         self.tags.collect do |tag|
           tag.name

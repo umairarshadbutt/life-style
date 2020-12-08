@@ -1,5 +1,6 @@
 class ArticlesController < ApplicationController
-    def index
+  include ArticlesHelper
+  def index
         @articles = Article.all
       end
 
@@ -38,6 +39,6 @@ class ArticlesController < ApplicationController
       redirect_to articles_path
   end
       def article_params
-        params.require(:article).permit(:title, :body)
+        params.require(:article).permit(:title, :body, :tag_list, :image)
       end
 end

@@ -3,6 +3,7 @@ class Article < ActiveRecord::Base
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   has_attached_file :image
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\z/ 
   def tag_list
     tags.collect(&:name).join(', ')
   end

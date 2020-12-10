@@ -5,6 +5,8 @@ class Article < ActiveRecord::Base
   has_attached_file :image
   has_many :votes
   validates_attachment_content_type :image, content_type: %r{\Aimage/.*\z}
+  validates :title, presence: true, length: { minimum: 3, maximum: 50 }
+  validates :body, presence: true, length: { minimum: 10, maximum: 500 }
   def tag_list
     tags.collect(&:name).join(', ')
   end

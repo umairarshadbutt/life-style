@@ -11,7 +11,7 @@
 [![Gmail](https://img.shields.io/badge/-Gmail-c14438?style=flat&logo=Gmail&logoColor=white)](mailto:Umair,umair6622@gmail.com)
 [![Portfolio](https://img.shields.io/badge/umair--arshad-Portfolio-brightgreen)](https://umairarshad.me/)
 </div>
-<p align="center">The main goal is to implement the main concepts of Ruby</p>
+<p align="center">It is the rails capstone project and is compulsory to master the ruby on rails curriculum. This project is all about articles like a blog app.</p>
 
 
 ## Live Demo

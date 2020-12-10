@@ -1,13 +1,38 @@
-<h1>Articles Suggested with <%= @tag.name %></h1>
-<div class="row" >
-    <% @tag.articles.each do |article| %>
-    <div class="col-sm-3">
-      <div class="card" >
-        <img class="card-img-top" style=" width: 100%; " src="<%= article.image %>" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to article.title, article_path(article) %></h5>
+
+
+
+
+<div class="row" style="margin-top: -20px;">
+  <% i = 0 %>
+    <% @tag.articles.in_groups_of(1, false) do |group| %>
+      <% group.each do |article| %>
+      <% if i.zero? %>
+      <div class="col-12 col-md-6">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-6 bg-article" style="height: 316px;background: url(<%= article.image  %>)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h2 class="cat-show-tile"><%= article.title%></h2>
+            <span class="article-title font-weight-bold"><%= article.body.first(120)%> </span><br/>
+            <%= link_to "Read more", article_path(article), class:"btn btn-primary" %>
+          </div>
         </div>
       </div>
-    </div>
-  <%end%>
+      <% else %>
+        <div class="col-12 col-md-6">
+          <div class="row no-gutters">
+            <div class="col-12 col-md-6">
+              <h2 class="cat-show-tile"><%= article.title%></h2>
+              <span class="article-title font-weight-bold"><%= article.body.first(120)%> </span><br/>
+              <%= link_to "Read more", article_path(article), class:"btn btn-primary" %>
+            </div>
+            <div class="col-12 col-md-6 bg-article" style="height: 316px;background: url(<%= article.image  %>)">
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% end %>
+    <% i = i+1 %>
+  <% end %>
 </div>
+

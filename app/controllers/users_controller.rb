@@ -2,9 +2,7 @@ class UsersController < ApplicationController
   before_action :authenticate_user!, only: %i[edit update]
   before_action :check_authorization, only: %i[edit update]
   before_action :set_user
-  def show
-    # @user = User.find(params[:id])
-  end
+  def show; end
 
   def edit
     if @user.edit(user_params)

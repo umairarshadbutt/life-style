@@ -16,7 +16,7 @@
 
 ## Live Demo
 
-To see a preview of the actual project, check out the [Live Demo Link](https://rails-life-style.herokuapp.com/)
+To see a preview of the actual project, check out the [Live Demo Link](https://ror-life-style.herokuapp.com/)
 
 
 
@@ -45,6 +45,8 @@ To get a local copy up and running follow these simple example steps.
 - cd to the project `cd life-style`
 - Install gems `bundle install`
 - Install Yarn `yarn install --check-files` 
+- Create database `rails db:create`
+- Migrate database `rails db:migrate`
 - Run `rails server`
 
 

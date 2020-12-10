@@ -1,13 +1,27 @@
-
-<div class="row" >
-    <% @articles.each do |article| %>
-    <div class="col-sm-3">
-      <div class="card" >
-        <img class="card-img-top"style=" width: 100%; " src="<%= article.image %>" alt="Card image cap">
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to article.title, article_path(article) %></h5>
+<div class="row" style="margin-top: -20px;">
+  <% i = 0 %>
+    <% @articles.in_groups_of(1, false) do |group| %>
+      <% group.each do |article| %>
+        <% if i.zero? %>
+          <div class="col-sm-12">
+        <div class="card" >
+          <img class="card-img-top"style=" width: 100%; " src="<%= article.image %>" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title"><%= link_to article.title, article_path(article) %></h5>
+          </div>
         </div>
       </div>
-    </div>
-  <%end%>
+      <% else %>
+          <div class="col-sm-3">
+          <div class="card" >
+              <img class="card-img-top"style=" width: 100%; " src="<%= article.image %>" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title"><%= link_to article.title, article_path(article) %></h5>
+              </div>
+            </div>
+          </div>
+        <% end %>
+      <% end %>
+    <% i = i+1 %>
+  <% end %>
 </div>

@@ -3,7 +3,6 @@ class UsersController < ApplicationController
   before_action :check_authorization, only: %i[edit update]
   before_action :set_user
   def show
-    # @user = User.find(params[:id])
   end
 
   def edit

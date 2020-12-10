@@ -16,7 +16,7 @@
 
 ## Live Demo
 
-To see a preview of the actual project, check out the [Live Demo Link](https://rails-life-style.herokuapp.com/)
+To see a preview of the actual project, check out the [Live Demo Link](https://ror-life-style.herokuapp.com/)
 
 
 

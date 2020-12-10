@@ -9,6 +9,7 @@ gem 'mini_magick', '~> 4.11'
 gem 'paperclip'
 gem 'rubocop', '~>0.81.0'
 gem 'sassc-rails', '>= 2.1.0'
+gem 'rspec', '~> 3.10'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3', '>= 6.0.3.4'
 # Use sqlite3 as the database for Active Record

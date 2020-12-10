@@ -14,6 +14,11 @@
 <p align="center">The main goal is to implement the main concepts of Ruby</p>
 
 
+## Live Demo
+
+To see a preview of the actual project, check out the [Live Demo Link](https://rails-life-style.herokuapp.com/)
+
+
 
 
 ## Built With

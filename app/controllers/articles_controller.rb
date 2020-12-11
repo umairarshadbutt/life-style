@@ -2,6 +2,7 @@ class ArticlesController < ApplicationController
   include ArticlesHelper
   def index
     @articles = Article.all
+    @articles = Article.order("created_at desc")
   end
 
   def show

@@ -8,6 +8,7 @@ class Article < ActiveRecord::Base
   validates_attachment_content_type :image, content_type: %r{\Aimage/.*\z}
   validates :title, presence: true, length: { minimum: 3, maximum: 50 }
   validates :body, presence: true, length: { minimum: 10, maximum: 500 }
+  validates :image, presence: true
   def tag_list
     tags.collect(&:name).join(', ')
   end

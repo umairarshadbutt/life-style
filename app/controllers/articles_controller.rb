@@ -17,9 +17,11 @@ class ArticlesController < ApplicationController
 
   def create
     @article = current_user.articles.build(article_params)
-    @article.save
-
-    redirect_to article_path(@article)
+    if @article.save
+      redirect_to article_path(@article)
+    else 
+      render 'new'
+    end
   end
 
   def edit

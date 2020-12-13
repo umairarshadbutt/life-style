@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_12_12_135010) do
+ActiveRecord::Schema.define(version: 2020_12_13_090621) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_12_12_135010) do
     t.bigint "image_file_size"
     t.datetime "image_updated_at"
     t.integer "user_id"
+    t.integer "vote_count"
   end
 
   create_table "comments", force: :cascade do |t|

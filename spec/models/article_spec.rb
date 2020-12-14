@@ -6,6 +6,5 @@ RSpec.describe Article, type: :model do
       it '' do
       end
     end
-
   end
 end

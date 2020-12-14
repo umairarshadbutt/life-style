@@ -2,7 +2,10 @@ require 'rails_helper'
 
 RSpec.describe Article, type: :model do
   describe Article do
-    let(:user_umair) { User.create(email: 'umair6622@gmail.com', password: 'password', password_confirmation: 'password') }
+    let(:user_umair) do
+      User.create(email: 'umair6622@gmail.com',
+                  password: 'password', password_confirmation: 'password')
+    end
     let(:subject) do
       described_class.new(
         title: 'Resume',
@@ -13,7 +16,6 @@ RSpec.describe Article, type: :model do
     end
 
     context 'validations' do
-
       it 'Content cannot be less than 10' do
         subject.body = 'text'
         expect(subject).not_to be_valid
@@ -23,9 +25,5 @@ RSpec.describe Article, type: :model do
       it '' do
       end
     end
-    
-    
-  
-    
   end
 end

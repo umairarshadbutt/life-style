@@ -48,6 +48,7 @@ To get a local copy up and running follow these simple example steps.
 - Create database `rails db:create`
 - Migrate database `rails db:migrate`
 - Run `rails server`
+- Test `bundle exec rake spec`
 
 
 

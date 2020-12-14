@@ -7,7 +7,6 @@ gem 'carrierwave', '~> 2.1'
 gem 'devise', '~> 4.7', '>= 4.7.3'
 gem 'mini_magick', '~> 4.11'
 gem 'paperclip'
-gem 'rspec', '~> 3.10'
 gem 'rubocop', '~>0.81.0'
 gem 'sassc-rails', '>= 2.1.0'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
@@ -45,7 +44,7 @@ group :development do
   gem 'web-console', '>= 3.3.0'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'factory_bot', '~> 6.1'
-  gem 'rspec-rails', '~> 4.0.1'
+  gem 'rspec-rails'
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
 end
@@ -55,6 +54,7 @@ group :test do
   gem 'capybara', '>= 2.15'
   gem 'selenium-webdriver'
   # Easy installation and use of web drivers to run system tests with browsers
+  gem 'rspec'
   gem 'webdrivers'
 end
 

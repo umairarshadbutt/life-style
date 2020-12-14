@@ -56,3 +56,27 @@
 .py-3 {
   margin-top: 10px;
 }
+
+.row {
+  margin-right: 0 !important;
+}
+
+.col-3 .col-12 .col-sm-3 .col-sm-3 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+div.col-sm-3 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+div.col-12 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}
+
+div.col-sm-12 {
+  padding-right: 0 !important;
+  padding-left: 0 !important;
+}

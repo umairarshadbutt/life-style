@@ -2,7 +2,7 @@ class ArticlesController < ApplicationController
   include ArticlesHelper
   def index
     @articles = Article.all
-    @articles = Article.includes(:votes).order('vote_count asc').limit(5)
+    @articles = Article.includes(:votes).order('vote_count DESC').limit(5)
   end
 
   def show

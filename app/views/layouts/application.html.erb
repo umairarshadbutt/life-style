@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>LifeStyle</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+  <header>
+<nav class="navbar navbar-default">
+ 
+  <div class="container-fluid" >
+    <a class="navbar-brand" href="/">Life Style</a>
+    <ul class="nav navbar-nav nav-right">
+      <% if user_signed_in? %>
+      <li class="nav-item ">
+            <%= link_to "Write a article", '/articles/new'%>
+      </li>
+      <%end%>
+      <li class="nav-item">
+        <% if user_signed_in? %>
+          <li> <%=link_to current_user.email, current_user %></li>
+          <li> <%= link_to "Logout", destroy_user_session_path, method: :delete %> </li>
+        <% else %>
+          <li> <%= link_to "Sign in / Sign up ", new_user_session_path%> </li>
+        <% end %>
+
+      </li>
+     
+    </ul>
+    
+  </div>
+</nav>
+
+    
+  </header>
+ 
+  
+  <%= yield %>
+  <div style="margin-bottom: 44px;"></div>
+  </body>
+  <!-- Footer -->
+   <div class="footer1">
+    <div class="footer-copyright text-center py-3" >© 2020 Copyright:
+      <a href="/"> Life Style </a>
+    </div>
+  </div>
+
+</html>

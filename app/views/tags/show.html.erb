@@ -1,0 +1,34 @@
+<div class="row" style="margin-top: -20px;">
+  <% i = 0 %>
+    <% @tag.articles.in_groups_of(1, false) do |group| %>
+      <% group.each do |article| %>
+      <% if i.zero? %>
+      <div class="col-12 col-md-6">
+        <div class="row no-gutters">
+          <div class="col-12 col-md-6 bg-article" style="height: 316px;background: url(<%= article.image  %>)">
+          </div>
+          <div class="col-12 col-md-6">
+            <h2 class="cat-show-tile"><%= article.title%></h2>
+            <span class="article-title font-weight-bold"><%= article.body.first(120)%> </span><br/>
+            <%= link_to "Read more", article_path(article), class:"btn btn-primary" %>
+          </div>
+        </div>
+      </div>
+      <% else %>
+        <div class="col-12 col-md-6">
+          <div class="row no-gutters">
+            <div class="col-12 col-md-6">
+              <h2 class="cat-show-tile"><%= article.title%></h2>
+              <span class="article-title font-weight-bold"><%= article.body.first(120)%> </span><br/>
+              <%= link_to "Read more", article_path(article), class:"btn btn-primary" %>
+            </div>
+            <div class="col-12 col-md-6 bg-article" style="height: 316px;background: url(<%= article.image  %>)">
+            </div>
+          </div>
+        </div>
+      <% end %>
+      <% end %>
+    <% i = i+1 %>
+  <% end %>
+</div>
+

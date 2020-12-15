@@ -1,0 +1,36 @@
+<div class="row">
+  <div class="col-8 col-md-offset-3">
+    <h1><%= @article.title %></h1>
+    <p>
+      Categories:
+      <% @article.tags.each do |tag| %>
+        <%= link_to tag.name, tag_path(tag) %>
+      <% end %>
+    </p>
+
+    <img style=" width: 70%; " src=<%=@article.image%>>
+    <p><%= @article.body %></p>
+    <p class="btn btn-primary">Has <%= pluralize(@article.vote_count, 'vote')%></p>
+    <% if user_signed_in? %>
+    <div class="d-flex pl-1 pb-1">
+        <span class="mr-3">
+          <%= vote_button  @article%>
+        </span>
+    </div>
+    <%end%>
+    <h3>Comments (<%= @article.comments.size %>)</h3>
+
+    <%= render partial: 'articles/comment', collection: @article.comments %>
+    <%= render partial: 'comments/form' %>
+<br>
+
+
+
+      <br>
+    <%= link_to "<< Back to Articles List", articles_path, class:"btn btn-primary" %>
+    <% if @article.user ==  current_user%>
+      <%= link_to "edit", edit_article_path(@article), class:"btn btn-primary" %>
+      <%= link_to "Delete", article_path(@article), method: :delete, data: {confirm: "Really delete the article?"}, class:"btn btn-danger"%>
+    <%end%>
+  </div>
+</div>

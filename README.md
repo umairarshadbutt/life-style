@@ -13,7 +13,7 @@
 </div>
 <p align="center">It is the rails capstone project and is compulsory to master the ruby on rails curriculum. This project is all about articles like a blog app.</p>
 
-
+![screenshot](app/assets/images/screen-shot.png)
 ## Live Demo
 
 To see a preview of the actual project, check out the [Live Demo Link](https://ror-life-style.herokuapp.com/)

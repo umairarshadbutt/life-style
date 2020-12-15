@@ -3,7 +3,7 @@ class Article < ActiveRecord::Base
   has_many :taggings, dependent: :destroy
   has_many :tags, through: :taggings
   has_attached_file :image
-  has_many :votes
+  has_many :votes, dependent: :destroy
   belongs_to :user
   validates_attachment_content_type :image, content_type: %r{\Aimage/.*\z}
   validates :title, presence: true, length: { minimum: 3, maximum: 50 }

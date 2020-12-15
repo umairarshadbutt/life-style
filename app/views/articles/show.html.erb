@@ -10,6 +10,7 @@
 
     <img style=" width: 70%; " src=<%=@article.image%>>
     <p><%= @article.body %></p>
+    <p class="btn btn-primary">Has <%= pluralize(@article.vote_count, 'vote')%></p>
     <% if user_signed_in? %>
     <div class="d-flex pl-1 pb-1">
         <span class="mr-3">

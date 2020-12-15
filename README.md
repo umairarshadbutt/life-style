@@ -81,6 +81,7 @@ Give a ⭐️ if you like this project!
 
 - Project inspired by Microverse Program
 - Behance: [Behance Design](https://www.behance.net/gallery/14554909/liFEsTlye-Mobile-version)
+- N+1 Queries and How to Avoid Them! [Medium Article](https://medium.com/@bretdoucette/n-1-queries-and-how-to-avoid-them-a12f02345be5)
 
 
 ## 📝 License
